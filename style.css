@@ -1,5 +1,9 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+}
 
-  .input-error {
+
+.input-error {
     border-color: red;
   }
   .input-error-message {
@@ -8,3 +12,57 @@
   .error-alert {
     color: red;
   }
+
+  body{
+    background-color: rgb(206, 181, 196);
+    margin: 50px;
+  }
+
+  form{
+    padding: 15px;
+    border: 2px solid green;
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg);
+    color: aliceblue;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  
+  }
+  form input {
+    background-color: palegoldenrod;
+    margin-bottom: 10px;
+    
+  }
+  #students-list{
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  .student-item{
+    margin: 20px 15px;
+    background-color: rgb(220, 209, 183);
+    width: 30%;
+    border: 5px solid grey;
+    border-radius: 15px;
+    padding: 10px;
+    color: #035b02;
+  }
+  .student-item button{
+    margin: 5px;  
+    border-radius: 5px;
+    background-color: rgb(18, 125, 56);
+    color: white;
+  }
+
+  .submitStudent{
+    background-color: rgb(149, 251, 149);
+    width: 50%;
+    height: 30px;
+    margin-top: 15px;
+    border-radius: 50px;
+  }
+#student-name, #student-surname, #student-age, #student-phone, #student-email {
+    width: 50%;
+    height: 30px;
+    border-radius: 50px;
+}
