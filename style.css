@@ -82,3 +82,15 @@
     height: 30px;
     border-radius: 50px;
 }
+.groupType{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  align-items: center;
+  row-gap: 5px;
+}
+
+
+.groupType label{
+background-color: #e7e7cf;
+color: #4e2106;
+}
