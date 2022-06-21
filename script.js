@@ -1,73 +1,110 @@
 const studentForm = document.querySelector('form');
 
-// const INITIAL_STUDENT_DATA =  [
-//     {name: 'petras',
-//     surname: 'petrauskas',
-//     age: 15,
-//     tel: 860011122,
-//     email:'aaa@aaa.aa',
-//     ItKnowledge: 4,
-//     group: 'type11',
-//     interest: 'C++',
-//     },
-//     {name: 'jonas',
-//     surname: 'jonauskas',
-//     age: 30,
-//     tel: 860033344,
-//     email:'bbb@bbb.bb',
-//     ItKnowledge: 6,
-//     group: 'type10',
-//     interest: 'javascript',
-//     },
-//     {name: 'antanas',
-//     surname: 'antanauskas',
-//     age: 40,
-//     tel: 860055566,
-//     email:'ccc@ccc.cc',
-//     ItKnowledge: 7,
-//     group: 'type7',
-//     interest: 'Python',
-//     },
-//     {name: 'algis',
-//     surname: 'algaitis',
-//     age: 55,
-//     tel: 860077788,
-//     email:'ddd@ddd.dd',
-//     ItKnowledge: 2,
-//     group: 'type10',
-//     interest: ['C++, jacascript']
-//     },
-//     {name: 'saulius',
-//     surname: 'saulaitis',
-//     age: 60,
-//     tel: 860099911,
-//     email:'eee@eee.ee',
-//     ItKnowledge: 9,
-//     group: 'type15',
-//     interest: ['C++, python']
-//     }
-// ]
+const INITIAL_STUDENT_DATA =  [
+    {name: 'petras',
+    surname: 'petrauskas',
+    age: 15,
+    tel: 860011122,
+    email:'aaa@aaa.aa',
+    ItKnowledge: 4,
+    group: 'type11',
+    interest: 'C++',
+    },
+    {name: 'jonas',
+    surname: 'jonauskas',
+    age: 30,
+    tel: 860033344,
+    email:'bbb@bbb.bb',
+    ItKnowledge: 6,
+    group: 'type10',
+    interest: 'javascript',
+    },
+    {name: 'antanas',
+    surname: 'antanauskas',
+    age: 40,
+    tel: 860055566,
+    email:'ccc@ccc.cc',
+    ItKnowledge: 7,
+    group: 'type7',
+    interest: 'Python',
+    },
+    {name: 'algis',
+    surname: 'algaitis',
+    age: 55,
+    tel: 860077788,
+    email:'ddd@ddd.dd',
+    ItKnowledge: 2,
+    group: 'type10',
+    interest: ['C++, jacascript']
+    },
+    {name: 'saulius',
+    surname: 'saulaitis',
+    age: 60,
+    tel: 860099911,
+    email:'eee@eee.ee',
+    ItKnowledge: 9,
+    group: 'type15',
+    interest: ['C++, python']
+    },
+    {name: 'auguste',
+    surname: 'augustaite',
+    age: 6,
+    tel: 862299911,
+    email:'eee@eee.ee',
+    ItKnowledge: 7,
+    group: 'type5',
+    interest: ['C++, python']
+    }
+    
+    
+]
 
 // ŠEŠTA UŽDUOTIS:
 // 1. Sukurti pradiniu duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
 // 2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda 
 // duomenis iš šio masyvo.
 
-// function renderInitialData (students){
-//     students.map(student => {
+function renderInitialData (students){
+  students.map(student => {
 
-//         let studentName = student.name;
-//         let studentSurname =student.surname;
-//         let studentAge = student.age;
-//         let studentPhone = student.tel;
-//         let studentEmail = student.email;
-//         let studentItKnowledge = student.ItKnowledge;
-//         let studentGroup = student.group;
-//         let interests = student.interest;
-//     })
-//   }
+      let studentName = document.createElement('p');
+      studentName.innerHTML = `student name : ${student.name}`
 
-// renderInitialData(INITIAL_STUDENT_DATA )
+      let studentSurname = document.createElement('p');
+      studentSurname.innerHTML = `student surname : ${student.surname}`
+      let studentAge = document.createElement('p')
+      studentAge.innerHTML = `student age is/are : ${student.age}`
+
+      let studentPhone = document.createElement('p')
+      studentPhone.innerHTML = `student phone is : ${student.tel}`
+
+      let studentEmail = document.createElement('p')
+      studentEmail.innerHTML = `student mail is :${student.email}`
+
+      let studentItKnowledge = document.createElement('p')
+      studentItKnowledge.innerHTML = `student it knowledge : ${student.ItKnowledge}`
+
+      let studentGroup = document.createElement('p')
+      studentGroup.innerHTML = `student group : ${student.group}`
+
+      let studentInterests = document.createElement('p')
+      studentInterests.innerHTML = `student interest is/are : ${student.interest}`
+      
+      let divContainer = document.createElement('div')
+      divContainer.classList.add('container')
+      let studentList = document.createElement('ul')
+      studentList.classList.add('student_list')
+      let studentItem = document.createElement('li')
+      studentItem.classList.add('student_item')
+
+      document.body.append(divContainer)
+      divContainer.append(studentList)
+      studentList.append(studentItem)
+      studentItem.append(studentName, studentSurname, studentPhone, studentEmail, studentItKnowledge, studentGroup, studentInterests)
+  })
+}
+
+renderInitialData(INITIAL_STUDENT_DATA )
 
 
 const itKnowledgeInputElement = document.querySelector('#student-it-knowledge');

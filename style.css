@@ -20,6 +20,17 @@
     background-color: rgb(206, 181, 196);
     margin: 50px;
   }
+  .container{
+    border: 2px solid black;
+    margin: 5px;
+    display: flex;
+    width: 24%;
+    background-color: rgb(238, 240, 210);
+}
+.student_item{
+    color: rgb(26, 45, 57);
+
+}
 
   form{
     padding: 15px;
