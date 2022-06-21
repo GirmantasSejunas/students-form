@@ -15,7 +15,8 @@ duomenis iš šio masyvo.
 SEPTINTA UŽDUOTIS:
 1. Prie kiekvieno studento pridėti mygtuką, kurį paspaudus leistų redaguoti studento duomenis.
 2. Redaguojant studentą, submit mygtuko tekstas turėtų pasikeisti į „Save Changes".
-ų redagavimą: „Studento (Vardas Pavardė) duomenys sėkmingai pakeisti". Šis span elementas dingsta po 5 sekundžių.3. Pakeitus studento duomenis, turi iššokti <span> elementas, kuris informuoja apie studento duomen
+ų redagavimą: „Studento (Vardas Pavardė) duomenys sėkmingai pakeisti". Šis span elementas dingsta 
+po 5 sekundžių.3. Pakeitus studento duomenis, turi iššokti <span> elementas, kuris informuoja apie studento duomen
 
 
 1. Sukurti Edit mygtuką.
